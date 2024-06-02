@@ -1,16 +1,25 @@
 import React from 'react';
 import logo from '../assets/logo.png';
+import Pricing from './Pricing';
+
+const NavigateToPricing = () =>{
+  window.location.href = '/pricing'
+}
+
+const NavigateToLanding = () => {
+  window.location.href= "/"
+}
 
 const Header = () => (
   <header className="flex justify-between items-center p-5 bg-black text-white">
     <div className="flex items-center pl-9">
       <img src={logo} alt="Logo" className="h-12 w-12 mr-2" />
-      <div className="text-4xl font-bold pt-5 pb-5">SmartNotes</div>
+      <button onClick={NavigateToLanding}  className="text-4xl font-bold pt-5 pb-5">SmartNotes</button>
     </div>
     <nav>
-      <a href="#features" className="ml-5 text-white hover:underline text-2xl p-6">Features</a>
-      <a href="#pricing" className="ml-5 text-white hover:underline text-2xl p-6">Pricing</a>
-      <a href="#support" className="ml-5 text-white hover:underline text-2xl p-6">Support</a>
+      <button href="#features" className="ml-5 text-white hover:underline text-2xl p-6">Features</button>
+      <button href="#pricing" onClick={NavigateToPricing} className="ml-5 text-white hover:underline text-2xl p-6">Pricing</button>
+      <button href="#support" className="ml-5 text-white hover:underline text-2xl p-6">Support</button>
     </nav>
     <button className="flex items-center px-4 py-2 bg-teal-500 text-black rounded-lg hover:bg-teal-600 transition duration-300">
         <span className="mr-2">Get Started</span>
@@ -20,5 +29,6 @@ const Header = () => (
     </button>
   </header>
 );
+
 
 export default Header;

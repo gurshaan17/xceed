@@ -1,20 +1,18 @@
 import './index.css'
+import { BrowserRouter , Route , Routes } from 'react-router-dom';
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Text from './components/Text';
-import LogoSection from './components/LogoSection';
+import LandingPage from './pages/LandingPage';
+import PricingPage from './pages/PricingPage';
 
 function App(){
-  return <div>
-    <Header />
-    <div className="border-t-2 border-teal-500 w-full"></div>
-    <Main />
-    <LogoSection />
-    <Text />
-    <Footer />
-  </div>
+  return <>
+    <BrowserRouter>
+      <Routes>
+        <Route path = "/" element={<LandingPage/>} />
+        <Route path="/pricing" element={<PricingPage/>} />
+      </Routes>
+    </BrowserRouter>
+  </>
 };
 
 export default App;
