@@ -1,14 +1,14 @@
-import Pricing from "../components/Pricing";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Support from "../components/Support";
 
-const PricingPage = () => {
+const SupportPage = ()=>{
     return <div>
-        <Header/>
+        <Header />
         <div className="border-t-2 border-teal-500 w-full"></div>
-        <Pricing/>
+        <Support />
         <Footer />
     </div>
 }
 
-export default PricingPage;
+export default SupportPage;
