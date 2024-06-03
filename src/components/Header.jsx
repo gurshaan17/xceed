@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-import Pricing from './Pricing';
+
 
 const NavigateToPricing = () =>{
   window.location.href = '/pricing'
@@ -18,6 +18,10 @@ const NavigateToSupport = () => {
   window.location.href="/support"
 }
 
+const NavigateToServices = () => {
+  window.location.href="/services"
+}
+
 const Header = () => (
   <header className="flex justify-between items-center p-5 bg-black text-white">
     <div className="flex items-center pl-9">
@@ -29,7 +33,7 @@ const Header = () => (
       <button href="#pricing" onClick={NavigateToPricing} className="ml-5 text-white hover:underline text-2xl p-6">Pricing</button>
       <button href="#support" onClick={NavigateToSupport} className="ml-5 text-white hover:underline text-2xl p-6">Support</button>
     </nav>
-    <button className="flex items-center px-4 py-2 bg-teal-500 text-black rounded-lg hover:bg-teal-600 transition duration-300">
+    <button onClick={NavigateToServices} className="flex items-center px-4 py-2 bg-teal-500 text-black rounded-lg hover:bg-teal-600 transition duration-300">
         <span className="mr-2">Get Started</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
