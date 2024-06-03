@@ -1,6 +1,10 @@
 import React from 'react';
 import meetingNotesImage from '../assets/meeting.png';
 
+const NavigateToServices = () => {
+  window.location.href="/services"
+}
+
 const Meeting = () => {
   return (
     <div className="bg-black text-white min-h-screen flex items-center justify-center">
@@ -14,7 +18,7 @@ const Meeting = () => {
             SmartNotes helps your team transcribe, summarize, search, and analyze voice conversations.
           </p>
           <div className="flex space-x-4 p-2">
-            <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg text-2xl">
+            <button onClick={NavigateToServices} className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg text-2xl">
               Get started for free
             </button>
             <button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg text-2xl">
